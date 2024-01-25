@@ -14,4 +14,11 @@
             <property name="name" value="mathi"></property>
             <property name="contact" value="987654321"></property>
             </bean>
+            
+             <bean class="springioc.user.Adhar" id="adhar">
+             <property name="id" value="1"></property>
+             <property name="city" value="chennai"></property>
+             <property name="adharNo" value="987654321"></property>
+             <property name="user" ref="user"></property>
+            </bean>
 </beans>

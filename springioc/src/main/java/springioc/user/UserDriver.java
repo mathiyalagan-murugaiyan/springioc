@@ -21,9 +21,12 @@ public class UserDriver {
 //		User u = (User)factory.getBean("user");
 //		System.out.println(u);
 		
+//		ApplicationContext context = new ClassPathXmlApplicationContext("user.xml");
+//		User user = context.getBean(User.class);
+//		System.out.println(user);
+		
 		ApplicationContext context = new ClassPathXmlApplicationContext("user.xml");
-		User user = context.getBean(User.class);
-		System.out.println(user);
+		System.out.println(context.getBean(Adhar.class));
 		
 
 	}
