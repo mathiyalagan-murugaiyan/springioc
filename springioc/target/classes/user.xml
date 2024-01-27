@@ -9,7 +9,7 @@
             http://www.springframework.org/schema/context/spring-context-3.0.xsd">
             
             
-            <bean class="springioc.user.User" id="user">
+          <!--   <bean class="springioc.user.User" id="user">
             <property name="id" value="1"></property>
             <property name="name" value="mathi"></property>
             <property name="contact" value="987654321"></property>
@@ -20,5 +20,22 @@
              <property name="city" value="chennai"></property>
              <property name="adharNo" value="987654321"></property>
              <property name="user" ref="user"></property>
+            </bean> 
+            
+            
+            <bean class="springioc.user.User" id="user">
+            <constructor-arg name="id" value="1"></constructor-arg>
+            <constructor-arg name="name" value="mathi"></constructor-arg>
+            <constructor-arg name="contact" value="9876765432"></constructor-arg>
             </bean>
+            
+            <bean class="springioc.user.Adhar" id="adhar">
+            <constructor-arg value="1"></constructor-arg>
+            <constructor-arg value="chennai"></constructor-arg>
+            <constructor-arg value="26254347383"></constructor-arg>
+            <constructor-arg ref="user"></constructor-arg>
+            </bean>  -->
+            <context:component-scan base-package="springioc.user"></context:component-scan>
+            
+            
 </beans>

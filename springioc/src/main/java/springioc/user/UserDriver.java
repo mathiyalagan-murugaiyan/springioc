@@ -1,10 +1,7 @@
 package springioc.user;
 
-import org.springframework.beans.factory.BeanFactory;
-import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.core.io.ClassPathResource;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 @SuppressWarnings("deprecation")
 public class UserDriver {
@@ -25,10 +22,26 @@ public class UserDriver {
 //		User user = context.getBean(User.class);
 //		System.out.println(user);
 		
-		ApplicationContext context = new ClassPathXmlApplicationContext("user.xml");
-		System.out.println(context.getBean(Adhar.class));
+//		ApplicationContext context = new ClassPathXmlApplicationContext("user.xml");
+//		System.out.println(context.getBean(Adhar.class));
 		
 
+//	ApplicationContext context = new AnnotationConfigApplicationContext(Config.class );
+//		
+//		System.out.println(context.getBean(Adhar.class));
+		
+		ApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
+		
+		Demo d1 = context.getBean(Demo.class);
+		Demo d2 = context.getBean(Demo.class);
+		Demo d3 = context.getBean(Demo.class);
+		Demo d4 = context.getBean(Demo.class);
+		
+		System.out.println(d1);
+		System.out.println(d2);
+		System.out.println(d3);
+		System.out.println(d4);
+		
 	}
 
 }
